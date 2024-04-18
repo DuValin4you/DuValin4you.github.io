@@ -1,0 +1,120 @@
+/*body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+	background-color: grey;
+        padding: 0;
+    }*/
+body {
+    font-family: 'Share Tech', sans-serif;
+    color: white;
+    text-shadow: 8px 8px 10px #0000008c;
+    background-color: #343a40;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #343a40, #2b2c31, #211f22, #151314, #000000);
+}
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .progress-container {
+        display: flex;
+        align-items: center;
+        width: 90%; /* Reducir el ancho para dispositivos móviles */
+        max-width: 300px; /* Ancho máximo */
+        margin-top: 10px;
+    }
+    .progress-bar {
+        flex-grow: 1;
+        height: 20px;
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        position: relative;
+    }
+    .progress {
+        width: 96%; /* Barra de progreso al 96% */
+        height: 100%;
+        background-color: #4CAF50; /* color verde */
+        border-radius: 10px;
+    }
+    .progress-text {
+        margin-left: 5px;
+        color: #4CAF50; /* color verde */
+        font-weight: bold;
+    }
+    #image {
+        width: 90%; /* Reducir el ancho para dispositivos móviles */
+        max-width: 300px; /* Ancho máximo */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    /* Clases para la barra de progreso del 50% */
+.progress-container-50 {
+    display: flex;
+    align-items: center;
+    width: 90%; /* Reducir el ancho para dispositivos móviles */
+    max-width: 300px; /* Ancho máximo */
+    margin-top: 10px;
+}
+
+.progress-bar-50 {
+    flex-grow: 1;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    position: relative;
+}
+
+.progress-50 {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.progress-50-filled {
+    width: 50%; /* Barra de progreso al 50% */
+    background-color: #FFD700; /* color amarillo */
+}
+
+.progress-text-50 {
+    margin-left: 5px;
+    color: #FFD700; /* color amarillo */
+    font-weight: bold;
+}
+/* Clases para la barra de progreso al 3% */
+.progress-container-3 {
+    display: flex;
+    align-items: center;
+    width: 90%; /* Reducir el ancho para dispositivos móviles */
+    max-width: 300px; /* Ancho máximo */
+    margin-top: 10px;
+}
+
+.progress-bar-3 {
+    flex-grow: 1;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    position: relative;
+}
+
+.progress-3 {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.progress-3-filled {
+    width: 3%; /* Barra de progreso al 3% */
+    background-color: #FF0000; /* color rojo */
+}
+
+.progress-text-3 {
+    margin-left: 5px;
+    color: #FF0000; /* color rojo */
+    font-weight: bold;
+}
+/* Estilos para hacer la imagen responsive */
+.progress-container img {
+    max-width: 100%; /* Ajustar la imagen al ancho del contenedor */
+    height: auto; /* Mantener la proporción de aspecto */
+}

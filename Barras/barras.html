@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barras de progreso</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<script>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+ul li {
+    width: 200px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    margin: 1.5em;
+    cursor: pointer;
+    padding: 1em;
+    background: rgb(43, 43, 43);
+    position: relative;
+    color: white;
+    border-radius: 5px;
+}
+ul li::before,
+ul li::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 5px;
+    width: 105%;
+    transition: all 0.4s;
+}
+ul li::before {
+    left: 0%;
+    height: 130%;
+    background: linear-gradient(to right, #021B79, #0575E6);
+}
+ul li::after {
+    left: -10%;
+    height: 120%;
+    background: #ffffff56;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.164);
+}
+ul li:hover::before {
+    transform: translateX(-2.5%);
+}
+ul li:hover::after {
+    transform: translateX(15%);
+}
+
+</script>
+<body>
+<div id="barra96" class="contenido" style="display:none;">
+<img src="tu_imagen.jpg" alt="Imagen" style="max-width: 100%; height: auto;">
+    <div class="progress-container">
+        <div class="progress-bar">
+            <div class="progress"></div>
+	</div>
+        <div class="progress-text">96%</div>
+    </div>
+    <div class="container">
+            <ul>
+                <li>DEAD SPACE</li>
+                <li>SILENT HILL H. COMING</li>
+                <li>Tomb Rider I.II.III</li>
+                <li>GTA IV</li>
+            </ul>
+        </div>
+</div>
+<div id="barra50" class="contenido" style="display:none;">
+<img src="medio-compatible.png" alt="Imagen" style="max-width: 100%; height: auto;">
+    <div class="progress-container-50">
+        <div class="progress-bar-50">
+            <div class="progress progress-50-filled"></div>
+        </div>
+        <div class="progress-text-50">50%</div>
+    </div>
+    <div class="container">
+            <ul>
+                <li>DEAD SPACE</li>
+                <li>SILENT HILL H. COMING</li>
+                <li>Tomb Rider I.II.III</li>
+                <li>GTA IV</li>
+            </ul>
+    </div>
+</div>
+<div id="barra3" class="contenido" style="display:none;">
+<img src="no-compatible.png" alt="Imagen" style="max-width: 100%; height: auto;">
+    <div class="progress-container-3">
+        <div class="progress-bar-3">
+            <div class="progress progress-3-filled"></div>
+        </div>
+        <div class="progress-text-3">3%</div>
+    </div>
+    <div class="container">
+            <ul>
+                <li>DEAD SPACE</li>
+                <li>SILENT HILL H. COMING</li>
+                <li>Tomb Rider I.II.III</li>
+                <li>GTA IV</li>
+            </ul>
+     </div>
+</div>
+</body>
+</html>
