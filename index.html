@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- w3c -->
+    <title>mobox tutorial</title>
+
+    <!-- opengraph -->
+    <meta property="og:image" content="https://duvalin4you.github.io/logo.png"/>
+    <meta property="og:image:alt" content="duvalin4you"/>
+    <meta property="og:image:width" content="1024"/>
+    <meta property="og:image:height" content="512"/>
+    <meta property="og:site_name" content="Mobox Termux Es"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Mobox Termux Es"/>
+    <meta property="og:url" content="https://duvalin4you.github.io"/>
+    <meta property="og:description" content="Aprende a instalar y usar de forma correcta EMULADOR de pc en Android | mobox termux."/>
+  
+    <!-- links -->
+    <script src="https://kit.fontawesome.com/c0b66eaba0.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- Enlace al CSS de Google Fonts para 'Roboto' y 'Press Start 2P' -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="widget.css" rel="stylesheet">
+    <script src="widget.js" type="text/javascript" async></script>
+</head>
+<body class="retro">
+    <header>
+        <button type="button" id="retro" class="cyanb">Quitar animación</button>
+        <button type="button" id="dark" class="cyanb">modo oscuro</button>
+    </header>
+    <main class="container p-md-4">
+      <div class="container text-center py-4"><a href="#redes" onclick="scrollToSection('redes')"><img src="logo.png" class="w-50" alt="sm64coopdx Logo"></div></a>
+
+<section class="parte1">
+  <button onclick="toggleMenu()" class='glowing-btn'>Menú</button>
+  <ul id="menu" style="display: none;">
+    <li><a href="copiar-codigos.html"><i class="fa-solid fa-laptop"></i> CUSTOM WINE MOBOX</a></li>
+    <li><a href="Barras/"><i class="fa-solid fa-language"></i> JUEGOS COMPATIBLES</a></li>
+    <li><a href="#"><i class="fa-solid fa-headset"></i> NO ACUALIZAR</a></li>
+    <li><a href="#"><i class="fa-brands fa-youtube"></i> <span style="color: red;">Y</span><span style="color: #47506f;">ou</span><span style="color: red;">T</span><span style="color: #47506f;">ube</span></a></li>
+  </ul>
+</section>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  if (menu.style.display === "none") {
+    menu.style.display = "block";
+  } else {
+    menu.style.display = "none";
+  }
+}
+</script>
+
+<!--    <section class="parte1">
+      <button onclick="toggleMenu()" class="but">Menú</button>
+<ul id="menu" style="display: none;">
+  <li><a href="#">Inicio</a></li>                               <li><a href="#">Productos</a></li>
+  <li><a href="#">Contacto</a></li>
+</ul>
+
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("menu");
+    if (menu.style.display === "none") {
+      menu.style.display = "block";                               } else {
+      menu.style.display = "none";
+    }
+  }
+</script>
+    </section> -->
+        <h3>¿Qué son los <span class="dx">EMULADORES</span>?</h3>
+        <p>La emulación de videojuegos es el uso de programas de software para ejecutar juegos diseñados originalmente para consolas de videojuegos en plataformas diferentes, como computadoras o dispositivos móviles. Permite acceder a juegos retro, ampliar la selección de juegos, mejorar la experiencia de juego y preservar la historia de los videojuegos. Es importante respetar las leyes de derechos de autor al utilizar emuladores y juegos.</p>
+	<!--Button-->
+	  <a href="comojugar.html">
+	    <button class='glowing-btn'><span class='glowing-txt'>C<span class='faulty-letter'>L</span>ICK</span></button>
+    </a>
+	
+        <p><strong>Como <span class="dx">JUGAR</span>?</strong>
+
+<div class="video-thumbnail">
+<img src="mobox.png" alt="mobox - español"> 
+</div>
+<p style="text-align: center;">mobox - emulador de pc</p>
+<button id="BotonCopiar" class="btn btn-primary">Copiar Comando</button>
+<div id="TextoACopiar">curl -s -o ~/x https://raw.githubusercontent.com/olegos2/mobox/main/install && . ~/x</div>
+<div class="faq-container">
+  <button class="question-main boton">¿Como instalar MOBOX?</button>
+  <div class="faq-item">
+    <p class="answer-main"><b><span style="color: red;">Mobox</span> es un proyecto diseñado para ejecutar aplicaciones de Windows x86 en Termux usando Box64 y Wine:</b></p>
+    <ol class="answer">
+      <li>Instale <a href="https://f-droid.org/repo/com.termux_118.apk">Termux</a>, <a href="https://raw.githubusercontent.com/olegos2/mobox/main/components/termux-x11.apk">Termux-X11</a> y <a href="https://raw.githubusercontent.com/olegos2/mobox/main/components/inputbridge.apk">InputBridge</a>.</li><br>
+      <li>Abra termux pegue el comando y pulse enter para activar el comando dentro de su aplicación Termux, el comando esta en el boton azul.<b>justo arriba por debajo de la imagen de termux</b></li>
+<br><li>Escriba <b>mobox</b> en <b>termux</b>.</li>
+<h2>Listo haz instalado <span class="dx">mobox</span><br><br>Configura Termux:X11 Preference.</h2><br>
+<ul>
+  <li>Display resolution mode: <span style="color: yellow;">exact</span></li>
+  <li>Display resolution: <span style="color: yellow;">1280x720</span></li>
+  <li>Reseed Screen While....: 🚫</li>
+  <li>Fullscreen on device display: ✅</li>
+  <li>Force Landscape orientation: ✅</li>
+  <li>Hide display cutout: ✅</li>
+  <li>Show additional keyboard: 🚫</li>
+  <li>Prefer scancodes when possible: ✅</li>
+</ul>
+
+<h2>Usar Controles Tactiles</h2>
+<p>Para controles táctiles se requiere la aplicación <a href="https://raw.githubusercontent.com/olegos2/mobox/main/components/inputbridge.apk"><span class="dx">Input Bridge</span></a></p>
+<h2>Sugerencias</h2>
+<p style="background-color: #b8d1a7;">Si tiene root, puede usar el Ajuste OOM, que libera memoria del sistema para mayor rendimiento, elimimamdo gran cantidad de tareas de tu memoria ram que sin root seria imposible lograrlo</p>
+    </ol>
+  </div>
+</div>
+
+
+        <div class="video-container">
+          <div class="video-thumbnail">
+            <img src="gun2.png" alt="Miniatura del video">
+            <a href="changelog.html"><button class="boton">- DESCARGAS -</button></a>
+          </div>
+          <h2><span class="dx">Retired64</span></h2>
+          <p>Videos - Guías aprendizaje y más!! aquí con <span class="dx">CmbR</span>.</p>
+          <video id="video" controls>
+            <source src="cmbr.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+<!--        <button type="button" onclick="location.href='https://wa.me/+526633225758'" class="but">Canal Youtube</button><br><br>
+        <a href="" onclick="Calendly.initPopupWidget({url: 'https://cmbrdevmx.github.io'});return false;" class="boton">WhatsApp</a><br> -->
+    <footer id="redes" class="futer">
+      <h3><span class="dx">Redes Sociales</span></h3>
+      <div class="redes-sociales">
+        <a href="https://www.instagram.com/cmbrgaming" target="_blank"><img src="instagram.png" alt="CmbRDevMx Gaming"></a>
+<!--        <a href="enlace_red_social_2" target="_blank"><img src="facebok.png" alt="Red Social 2"></a> -->
+        <a href="https://www.youtube.com/@CmbRGaming" target="_blank"><img src="social.png" alt="CmbR Gaming YouTube"></a>
+        <a href="https://x.com/cmbrdevmx" target="_blank"><img src="twitter.png" alt="@cmbrdevmx"></a>
+    </div>
+    </footer>
+    <footer class="text-center p-2">
+         <p>&copy; <span class="dx">CmbR</span> Traciende 2024</p>
+	 <a href="" class='glowing-btn'>Ver Videos</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="retro.js"></script>
+    <script src="video.js"></script>
+    <script src="faq.js"></script>
+</body>
+</html>

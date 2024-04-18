@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+/*DE ABAJO*/
+:root {
+  --glow-color: hsl(186 100% 69%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.glowing-btn {
+  position: relative;
+  color: var(--glow-color);
+  cursor: pointer;
+  padding: 0.35em 1em;
+  border: 0.15em solid var(--glow-color);
+  border-radius: 0.45em;
+  background: none;
+  perspective: 2em;
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+  letter-spacing: 1em;
+
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  animation: border-flicker 2s linear infinite;
+}
+
+.glowing-txt {
+  float: left;
+  margin-right: -0.8em;
+  -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+  animation: text-flicker 3s linear infinite;
+}
+
+.faulty-letter {
+  opacity: 0.5;
+  animation: faulty-flicker 2s linear infinite;
+}
+
+.glowing-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+  filter: blur(1em);
+  transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+  background: var(--glow-color);
+  pointer-events: none;
+}
+
+.glowing-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: var(--glow-color);
+  box-shadow: 0 0 2em 0.2em var(--glow-color);
+  transition: opacity 100ms linear;
+}
+
+.glowing-btn:hover {
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: none;
+  animation: none;
+}
+
+.glowing-btn:hover .glowing-txt {
+  animation: none;
+}
+
+.glowing-btn:hover .faulty-letter {
+  animation: none;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.glowing-btn:hover:before {
+  filter: blur(1.5em);
+  opacity: 1;
+}
+
+.glowing-btn:hover:after {
+  opacity: 1;
+}
+
+@keyframes faulty-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 0.1;
+  }
+  4% {
+    opacity: 0.5;
+  }
+  19% {
+    opacity: 0.5;
+  }
+  21% {
+    opacity: 0.1;
+  }
+  23% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  83% {
+    opacity: 0.4;
+  }
+
+  87% {
+    opacity: 1;
+  }
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity: 0.1;
+  }
+
+  2% {
+    opacity: 1;
+  }
+
+  8% {
+    opacity: 0.1;
+  }
+
+  9% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.7;
+  }
+  72% {
+    opacity: 0.2;
+  }
+
+  77% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes border-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.1;
+  }
+
+  8% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .glowing-btn{
+    font-size: 1em;
+  }
+}
+
+
+
+
+/*DE ARRIBA BOTTON*/
+
+@keyframes bgscroll {
+    0% {
+        background-position: top left;
+    }
+    50% {
+        background-position: bottom right;
+    }
+    100% {
+        background-position: top left;
+    }
+}
+
+#TextoACopiar { display:none; }
+
+@keyframes rainbow {
+    0% {
+        color: #ff0000;
+    }
+    16% {
+        color: #dcdc00;
+    }
+    33% {
+        color: #00ff00;
+    }
+    50% {
+        color: #00ffff;
+    }
+    67% {
+        color: #0000ff;
+    }
+    83% {
+        color: #ff00ff;
+    }
+    100% {
+        color: #ff0000;
+    }
+}
+
+body {
+    background: rgba(136, 136, 136, 0.3);
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+}
+
+body.retro {
+    color: #000000;
+    background: url("hats.png") #ffffff fixed repeat top left / 15%;
+    animation: bgscroll 30s linear infinite;
+}
+
+body.dark {
+    color: #ffffff;
+    background-color: #000000;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    font-family: 'Kanit', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+header button {
+    flex-grow: 1;
+    margin: 0 1em;
+}
+
+main {
+    background-color: #ffffffee;
+}
+
+body.dark main {
+    background-color: #000000a6;
+}
+
+body.retro .dx {
+    animation: rainbow 2s linear infinite;
+}
+
+.x {
+    color: #ec7731;
+}
+
+h3 {
+    color: #ff0000;
+}
+
+h4 {
+    color: #0000ff;
+}
+/*PARA LOS BOTONES*/
+
+.but {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #5e0000; /* Color verde oscuro */
+    color: yellow; /* Color del texto amarillo */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    position: relative; /* Posición relativa para el efecto de movimiento */
+    overflow: hidden; /* Ocultar el desbordamiento */
+}
+
+.but::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* Empieza fuera del botón */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3); /* Color de la luz que pasa */
+    transition: left 0.5s ease-in-out; /* Transición suave */
+}
+
+.but:hover::before {
+    left: 100%; /* Termina fuera del botón */
+}
+
+/*REDES SOCIALES*/
+
+    .futer {
+/*        background-color: #333;*/
+        padding: 20px 0;
+        text-align: center;
+    }
+    .redes-sociales {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .redes-sociales img {
+        width: 50px;
+        margin: 0 10px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .redes-sociales img:hover {
+        transform: scale(1.1);
+    }
+
+/*VIDEO CSS*/
+.video-container {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.video-container video {
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+}
+
+h2, p {
+  padding: 10px;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .video-container {
+    border-radius: 10px;
+  }
+}
+
+.video-thumbnail {
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+
+
+
+.answer-main, .answer {
+  display: none;
+  background-color: #ffffffa6;
+  color: #000;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 2s ease; /* Aumenta la duración de la transición */
+}
+
+.show {
+  display: block;
+  max-height: 1000px; /* ajusta este valor según la altura máxima que necesites */
+}
+
+footer {
+    margin-top: 30px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+<!-- HTML !-->
+.parte1 {
+  background-color: #222; /* Color de fondo oscuro */
+  padding: 20px;
+  border: 1px solid #444; /* Borde estilo hacking terminal */
+  border-radius: 5px;
+}
+
+.parte1 button.but {
+  background-color: #444; /* Color de fondo del botón */
+  color: #fff; /* Color de texto blanco */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.parte1 button.but:hover {
+  background-color: #555; /* Color de fondo del botón al pasar el ratón */
+}
+
+.parte1 ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.parte1 ul li {
+  margin-bottom: 10px;
+}
+
+.parte1 ul li a {
+  color: #fff; /* Color de texto blanco */
+  text-decoration: none;
+}
+
+.parte1 ul li a:hover {
+  text-decoration: underline;
+}
+
+
+
+.parte1 {
+/*  background-color: blue; Fondo negro */
+  color: #fff; /* Texto blanco */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+/* Estilo para el botón */
+.parte1 button.but {
+  background-color: #1dcb82; /* Color de fondo del botón */
+  color: #fff; /* Color de texto blanco */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Estilo para el botón al pasar el ratón */
+.parte1 button.but:hover {
+  background-color: #148b72; /* Color de fondo del botón al pasar el ratón */
+}
+
+/* Estilo para la lista */
+.parte1 ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* Estilo para los ítems de la lista */
+.parte1 ul li {
+  margin-bottom: 10px;
+}
+
+/* Estilo para los enlaces dentro de los ítems de la lista */
+.parte1 ul li a {
+  color: #0f0; /* Color verde (LED) */
+  text-decoration: none;
+}
+
+/* Estilo para los enlaces al pasar el ratón */
+.parte1 ul li a:hover {
+  text-decoration: underline;
+}
+
+
+/*TEST*/
+
+
+.parte1 ul {
+  list-style: none; /* Quita los puntos de la lista */
+  padding: 0;
+  margin: 0;
+}
+
+.parte1 ul li {
+  display: block; /* Muestra los elementos li como bloques */
+  margin-bottom: 10px; /* Espacio entre elementos li */
+  border-radius: 5px; /* Borde redondeado */
+}
+
+.parte1 ul li a {
+  display: block; /* Hace que los enlaces ocupen todo el ancho del contenedor */
+  color: #0f0; /* Color verde */
+  text-decoration: none; /* Quita el subrayado del enlace */
+  padding: 10px 15px; /* Espacio interior del enlace */
+  border: 1px solid #0f0; /* Borde del enlace */
+  border-radius: 5px; /* Borde redondeado */
+}
+
+.parte1 ul li a:hover {
+  background-color: #0f0; /* Cambia el fondo al pasar el mouse */
+  color: #fff; /* Cambia el color del texto al pasar el mouse */
+}
+.parte1 ul li:first-child {
+  margin-top: 10px; /* Espacio superior para el primer elemento li */
+}
+
+.cyanb {
+  color: cyan; /* Letras cyan */
+  background-color: transparent; /* Fondo transparente */
+  border: 1px solid cyan; /* Borde delgado color cyan */
+  padding: 10px 20px; /* Espaciado interior del botón */
+  border-radius: 5px; /* Borde redondeado */
+  cursor: pointer; /* Cursor al pasar por encima */
+}
+
+.cyanb:hover {
+  background-color: cyan; /* Fondo cyan al pasar el mouse */
+  color: white; /* Cambio de color del texto al pasar el mouse */
+}
